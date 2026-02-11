@@ -137,8 +137,11 @@ docker-compose.yml
 With Compose:
 docker compose up
 
-Basic docker-compose.yml :
+## Docker Compose
 
+Basic docker-compose.yml:
+
+```yaml
 version: "3.9"
 
 services:
@@ -158,6 +161,8 @@ services:
 
 volumes:
   db_data:
+```
+
 
 
 Key Sections Explained :
