@@ -164,14 +164,20 @@ volumes:
 ```
 
 
+## Key Sections Explained
 
-Key Sections Explained :
-version : Specifies Compose file format version.
-services : Defines containers.
-build : Builds image from Dockerfile.
-image : Uses image from Docker Hub.
-ports : Maps host port → container port.
-environment : Sets environment variables.
-depends_on : Ensures one service starts before another.
-volumes : Defines persistent storage.
+- **version** : Specifies the Docker Compose file format version.
 
+- **services** : Defines the containers that make up your application.
+
+- **build** : Builds the image from a Dockerfile.
+
+- **image** : Uses an image from Docker Hub.
+
+- **ports** : Maps host port → container port.
+
+- **environment** : Sets environment variables inside the container.
+
+- **depends_on** : Ensures one service starts before another.
+
+- **volumes** : Defines persistent storage.
