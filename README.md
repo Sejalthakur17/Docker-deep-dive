@@ -59,25 +59,25 @@ Execution Flow :
 Docker CLI → Docker Daemon → containerd → runc → Container
 
 ## Dockerfile Deep Dive :
-# 1. Base Image : Uses Node.js v18 with a lightweight Alpine Linux base image.
+1. Base Image : Uses Node.js v18 with a lightweight Alpine Linux base image.
 FROM node:18-alpine
 
-# 2. Set Working Directory : Sets /app as the working directory inside the container.
+2. Set Working Directory : Sets /app as the working directory inside the container.
 WORKDIR /app
 
-# 3. Copy dependency files : Copies dependency files to install packages efficiently.
+3. Copy dependency files : Copies dependency files to install packages efficiently.
 COPY package*.json ./
 
-# 4. Install dependencies : Installs all required Node.js dependencies during build time.
+4. Install dependencies : Installs all required Node.js dependencies during build time.
 RUN npm install
 
-# 5. Copy application code : Copies the rest of your application code into the container.
+5. Copy application code : Copies the rest of your application code into the container.
 COPY . .
 
-# 6. Expose application port : Declares that the app runs on port 3000.
+6. Expose application port : Declares that the app runs on port 3000.
 EXPOSE 3000
 
-# 7. Default startup command : Starts the application when the container runs.
+7. Default startup command : Starts the application when the container runs.
 CMD ["npm", "start"]
 
 ## Key Docker Commands :
@@ -138,6 +138,7 @@ With Compose:
 docker compose up
 
 Basic docker-compose.yml :
+
 version: "3.9"
 
 services:
@@ -157,6 +158,7 @@ services:
 
 volumes:
   db_data:
+
 
 Key Sections Explained :
 version : Specifies Compose file format version.
